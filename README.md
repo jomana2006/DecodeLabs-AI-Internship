@@ -7,9 +7,9 @@ The internship consists of four projects starting from 15th of May, 2026 till th
 
 • Simple Chatbot (General Study Helper Bot) {Date: 15/5/2026-21/5/2026}  
 
-• Data Classification with AI (Zoo Animal Classifier) {Date: 22/5/2026-Finish Date Still Unknown}  
+• Data Classification with AI (Zoo Animal Classifier) {Date: 22/5/2026-25/5/2026}  
 
-• Project Not Given Yet.  
+• AI Recommendation (Project Name Not Decided) {Date: 25/5/2026-Finish Date still not Specified}  
 
 • Project Not Given Yet.  
 
