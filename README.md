@@ -9,7 +9,7 @@ The internship consists of four projects starting from 15th of May, 2026 till th
 
 • Data Classification with AI (Zoo Animal Classifier) {Date: 22/5/2026-25/5/2026}  
 
-• AI Recommendation (Project Name Not Decided) {Date: 25/5/2026-Finish Date still not Specified}  
+• AI Recommendation Logic (Project Name Not Decided) {Date: 25/5/2026-Finish Date still not Specified}  
 
 • Project Not Given Yet.  
 
