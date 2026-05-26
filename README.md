@@ -24,15 +24,13 @@ The structure of the project was an IPO (Input-Process-Output) architecture whic
 2. Processing → How do we process this input?  
 3. Output → After processing, what's the program supposed to print out?  
 
-***Input***
----  
+==Input==  
 
 Since this is a rule-based chatbot that's supposed to answer student's questions, our input was questions from a student. For example, 'How can I study more effectively?'  
 
 The program simply reads the input using `input()` and stores it in a user input variable.  
 
-***Processing***
----  
+==Processing==  
 
 Before we discuss the processing of the input itself, we have to talk about the 'rule-based' and 'automatic responses' areas.  
 
@@ -40,13 +38,11 @@ The rules or the automatic responses are stored in Python Dictionaries. Why was 
 
 Now, what if the keyword was written differently than what's stored in the dictionary? Here's where input sanitisation comes in. The program takes the input and uses `.lower()` and `.strip` to turn the whole input into lowercase, and to even remove leading and trailing blank characters.  
 
-***Output***
----  
+==Output==  
 
 Now, if the keyword was found, the chatbot will print out the needed response. If the keyword was not found, it will respond with 'I don't understand'. If the keyword was 'exit', the program will stop running. That means the whole program runs in a while loop forever until the user types 'exit'.  
 
-***Conclusion***
----  
+==Conclusion==  
 
 There are some missing features in this program:  
 
