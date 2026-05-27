@@ -15,39 +15,63 @@ The internship consists of four projects starting from 15th of May, 2026 till th
 
 This README will update until the finishing of the Internship.
 
-## Project One: General Study Helper Bot
-What is the General Study Helper Bot? It is a chatbot that gives automated responses on things like time management, procrastination, note-taking, etc.
+## General Study Helper Bot
+=======================
 
-The structure of the project was an IPO (Input-Process-Output) architecture which mean we had three areas to tackle:  
+A simple rule-based chatbot that provides students with automated tips on time management, procrastination, note-taking, exam stress, and studying strategies.
 
-1. Input → What's our input? What will the user give us and what are we supposed to do with it?  #
-2. Processing → How do we process this input?  
-3. Output → After processing, what's the program supposed to print out?  
+Project by Jomana Shaltout — DecodeLabs Project 1
 
-*Input* 
+#### About
 
-Since this is a rule-based chatbot that's supposed to answer student's questions, our input was questions from a student. For example, 'How can I study more effectively?'  
+The General Study Helper Bot is a lightweight Python chatbot that reads a student’s question or phrase and replies with a prewritten helpful message. It demonstrates an IPO (Input–Process–Output) architecture and uses a dictionary of keyword-to-response mappings to produce quick automated responses. The program is intended as a learning project to explore basic chatbot design, text sanitization, and rule-based intent matching.
 
-The program simply reads the input using `input()` and stores it in a user input variable.  
+#### Features  
 
-*Processing*  
+- Continuous loop to interact with the user until they type exit.  
 
-Before we discuss the processing of the input itself, we have to talk about the 'rule-based' and 'automatic responses' areas.  
+- Keyword-based intent matching (stored in a Python dictionary) for fast lookups.  
 
-The rules or the automatic responses are stored in Python Dictionaries. Why was a dictionary used, and how? Basically, a Dictionary has a time complexity of O(1) in searching compared to conditional statements like `if-elif-else` or `match-case`, hence why it was used. How did we store the responses in the dictionary? It was done as keyword-to-response where if the program searches in the student's question and finds the needed keyword, it will respond accordingly.  
+- Input sanitization: trimming whitespace and lowercasing for robust matching.  
 
-Now, what if the keyword was written differently than what's stored in the dictionary? Here's where input sanitisation comes in. The program takes the input and uses `.lower()` and `.strip` to turn the whole input into lowercase, and to even remove leading and trailing blank characters.  
+- Seven initial intents covered: hello, studying effectively, exam stress, time management, note taking, procrastination, bye.  
 
-*Output*  
+- Fallback reply (“I don’t understand”) for unrecognized inputs.  
 
-Now, if the keyword was found, the chatbot will print out the needed response. If the keyword was not found, it will respond with 'I don't understand'. If the keyword was 'exit', the program will stop running. That means the whole program runs in a while loop forever until the user types 'exit'.  
+- Greeting message on startup and clean termination.
 
-*Conclusion*  
+#### Architecture (IPO)
 
-There are some missing features in this program:  
+Input: User enters a phrase or question (e.g., "How can I study more effectively?") via input().
 
-1. If the user types two keywords, the program may mistake the intention of the user and respond differently than what's required.  
-2. If the user types two keywords, the program will only respond to the first one and ignore the other.  
-3. It doesn't allow for follow-up questions.  
+Process: The program sanitizes the string (.strip() and .lower()), then scans for keywords using the in operator and a dictionary of keyword-to-response pairs.
+
+Output: If a keyword is matched, the bot prints the corresponding response. If none match, it prints a fallback message. Typing exit ends the loop and closes the program.
+
+#### Why a dictionary?
+
+Dictionaries provide average O(1) lookup time and keep the mapping between keywords and responses compact and easy to manage. This is simpler and faster than long chains of conditional statements for the scale of this project.
+
+#### Limitations and Known Issues  
+
+- Exact keyword matching: the bot only recognizes stored keywords and will not handle synonyms or misspellings.  
+
+- Single-keyword handling: if a user input contains multiple keywords, the bot currently responds to the first detected keyword and ignores others.  
+
+- No follow-up or context handling: conversation history and multi-turn clarifications are not supported.  
+
+- No empty-input handling or input length checks.  
+
+- Limited topic coverage (only 7 intents initially).
+
+#### Suggested improvements  
+
+- Implement basic stemming/lemmatization to handle synonyms and misspellings.  
+
+- Support multi-intent inputs (aggregate relevant responses or prompt for clarification).  
+
+- Add a simple state manager to support follow-up questions and short multi-turn dialogs.  
+
+- Expand intent coverage and make responses modular.
 
 ## Project Two: Zoo Animal Classifier
