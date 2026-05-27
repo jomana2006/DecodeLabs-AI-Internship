@@ -16,7 +16,6 @@ The internship consists of four projects starting from 15th of May, 2026 till th
 This README will update until the finishing of the Internship.
 
 ## General Study Helper Bot
-=======================
 
 A simple rule-based chatbot that provides students with automated tips on time management, procrastination, note-taking, exam stress, and studying strategies.
 
